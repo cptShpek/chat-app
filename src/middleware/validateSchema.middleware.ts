@@ -15,9 +15,8 @@ const validateSchema =
     } catch (e: any) {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const message = e.errors.map((err: any) => err.message);
-      return res
-        .status(400)
-        .json({ message: message.join(","), sucess: false });
+      res.status(400).json({ message: message.join(","), success: false });
     }
   };
+
 export default validateSchema;

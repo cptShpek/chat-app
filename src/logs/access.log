@@ -1,2 +1,23 @@
  GET /api 304 3.433 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Tue, 01 Oct 2024 12:42:31 GMT
  GET /api 304 3.624 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Tue, 01 Oct 2024 13:02:30 GMT
+ GET /api/roles 404 8.111 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Wed, 02 Oct 2024 08:34:07 GMT 
+ GET /api/role 200 36.047 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Wed, 02 Oct 2024 08:34:12 GMT
+ POST /api/role 404 3.139 ms PostmanRuntime/7.28.4 Wed, 02 Oct 2024 08:37:34 GMT 
+ POST /api/role/ 404 1.572 ms PostmanRuntime/7.28.4 Wed, 02 Oct 2024 08:37:55 GMT 
+ GET /api/role 200 40.067 ms PostmanRuntime/7.28.4 Wed, 02 Oct 2024 08:39:35 GMT
+ POST /api/role 404 8.973 ms PostmanRuntime/7.28.4 Wed, 02 Oct 2024 08:46:44 GMT 
+ POST /api/role 201 88.320 ms PostmanRuntime/7.28.4 Wed, 02 Oct 2024 08:47:53 GMT
+ POST /api/role 201 79.664 ms PostmanRuntime/7.28.4 Wed, 02 Oct 2024 08:48:18 GMT
+ GET /api/role 200 33.381 ms PostmanRuntime/7.28.4 Wed, 02 Oct 2024 08:48:22 GMT
+ POST /api/role 400 360.285 ms PostmanRuntime/7.28.4 Wed, 02 Oct 2024 09:13:22 GMT 
+ POST /api/auth/register 201 188.061 ms PostmanRuntime/7.28.4 Wed, 02 Oct 2024 09:37:28 GMT
+ POST /api/auth/register 400 18.628 ms PostmanRuntime/7.28.4 Wed, 02 Oct 2024 09:40:10 GMT 
+ POST /api/auth/register 201 176.117 ms PostmanRuntime/7.28.4 Wed, 02 Oct 2024 09:40:22 GMT
+ POST /api/auth/register 201 158.755 ms PostmanRuntime/7.28.4 Wed, 02 Oct 2024 09:40:48 GMT
+ POST /api/auth/register 201 167.041 ms PostmanRuntime/7.28.4 Wed, 02 Oct 2024 09:48:55 GMT
+ POST /api/auth/register 201 173.954 ms PostmanRuntime/7.28.4 Wed, 02 Oct 2024 09:49:29 GMT
+ POST /api/auth/register 201 175.247 ms PostmanRuntime/7.28.4 Wed, 02 Oct 2024 09:51:33 GMT
+ POST /api/auth/register 201 180.547 ms PostmanRuntime/7.28.4 Wed, 02 Oct 2024 09:52:21 GMT
+ POST /api/auth/register 201 712.359 ms PostmanRuntime/7.28.4 Wed, 02 Oct 2024 09:54:27 GMT
+ POST /api/auth/register 201 605.895 ms PostmanRuntime/7.28.4 Wed, 02 Oct 2024 09:56:22 GMT
+ POST /api/auth/register 201 2015.288 ms PostmanRuntime/7.28.4 Wed, 02 Oct 2024 10:02:13 GMT
