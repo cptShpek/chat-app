@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import React, { useMemo, useState } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import {
   Backdrop,
   Box,
@@ -14,11 +14,7 @@ import {
 } from "@mui/material";
 import { VisibilityOff, Visibility } from "@mui/icons-material";
 import { getInputValue } from "../../utils";
-import { ApiRoutes, AppRoutes } from "../../constants/routes";
-import { useFetch } from "../../hooks";
-import { AuthResponse } from "../../interfaces";
-import { useNavigate } from "react-router-dom";
-import { useUserContext } from "../../providers/user";
+import { useLogin } from "../../hooks";
 
 const Container = styled("div")({
   height: "100vh",
@@ -38,9 +34,7 @@ const Paper = styled(Box)({
 });
 
 export const LoginPage: React.FC = () => {
-  const navigate = useNavigate();
-  const { setUser } = useUserContext();
-  const [loading, appFetch] = useFetch();
+  const { loading, login } = useLogin();
   const [show, setShow] = useState(false);
   const [password, setPassword] = useState<string>("");
   const [email, setEmail] = useState<string>("");
@@ -62,17 +56,10 @@ export const LoginPage: React.FC = () => {
     setEmail(value);
   };
 
-  const handleSubmit = async () => {
-    const reqBody = { email, password };
-    const response: AuthResponse = await appFetch(ApiRoutes.LOGIN, {
-      reqBody,
-      method: "POST",
-    });
-    if (response.success && response.user) {
-      navigate(AppRoutes.HOME);
-      setUser(response.user);
-    }
-  };
+  const handleSubmit = useCallback(
+    () => login({ email, password }),
+    [email, password, login]
+  );
 
   return (
     <Container>
