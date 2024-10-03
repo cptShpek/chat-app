@@ -7,7 +7,7 @@ import { createUser, findUserByEmail } from "../../services/user.services";
 import { ErrorCode } from "../../error/custom.errors";
 import { getAllRoles } from "../../services/role.services";
 import { registerUserInput } from "../../validation/auth.validation";
-import { sendMail } from "../../utils/sendMail";
+import { EventEmitterInstance } from "../../config/event-emitter";
 
 //@desc signup
 //@method POST  /auth/signup
@@ -47,16 +47,8 @@ export const registerUser = asyncHandler(
       OTPCode: code,
       OTPCodeExpires: Date.now() + verificationExpires,
     });
+    EventEmitterInstance.emit("signup", { code, name, email });
 
-    await sendMail({
-      email: email,
-      subject: "Email verification",
-      template: "emailVerification.mails.ejs",
-      data: {
-        user: req.body.name,
-        code,
-      },
-    });
     res.status(201).json({ success: true, message: "Verification email sent" });
   }
 );

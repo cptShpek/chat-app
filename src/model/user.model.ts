@@ -12,13 +12,6 @@ const userSchema = new Schema<IUser>(
     phoneNumber: {
       type: String,
       unique: false,
-      validate: {
-        validator: function (v: string) {
-          // Example: Validate if the phone number follows a specific format
-          return /\d{3}-\d{3}-\d{4}/.test(v);
-        },
-        message: (props) => `${props.value} is not a valid phone number!`,
-      },
     },
     email: {
       type: String,
