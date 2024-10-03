@@ -4,6 +4,7 @@ import { forgotPassword } from "./forgot.auth.controller";
 import { resetPassword } from "./resetPassword.auth.controller";
 import { login } from "./login.auth.controller";
 import { changePassword } from "./changePassword.auth.controller";
+import { logout } from "./logout.auth.controller";
 
 export {
   registerUser,
@@ -12,4 +13,5 @@ export {
   resetPassword,
   login,
   changePassword,
+  logout,
 };

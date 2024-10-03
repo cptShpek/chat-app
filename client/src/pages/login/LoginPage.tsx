@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import React, { useMemo, useState } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import {
   Backdrop,
   Box,
@@ -14,8 +14,7 @@ import {
 } from "@mui/material";
 import { VisibilityOff, Visibility } from "@mui/icons-material";
 import { getInputValue } from "../../utils";
-import { ApiRoutes } from "../../constants/routes";
-import { useFetch } from "../../hooks";
+import { useLogin } from "../../hooks";
 
 const Container = styled("div")({
   height: "100vh",
@@ -35,7 +34,7 @@ const Paper = styled(Box)({
 });
 
 export const LoginPage: React.FC = () => {
-  const [loading, appFetch] = useFetch();
+  const { loading, login } = useLogin();
   const [show, setShow] = useState(false);
   const [password, setPassword] = useState<string>("");
   const [email, setEmail] = useState<string>("");
@@ -57,10 +56,10 @@ export const LoginPage: React.FC = () => {
     setEmail(value);
   };
 
-  const handleSubmit = async () => {
-    const reqBody = { email, password };
-    appFetch(ApiRoutes.LOGIN, { reqBody, method: "POST" });
-  };
+  const handleSubmit = useCallback(
+    () => login({ email, password }),
+    [email, password, login]
+  );
 
   return (
     <Container>

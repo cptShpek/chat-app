@@ -5,4 +5,5 @@ export const AppRoutes = {
 
 export const ApiRoutes = {
   LOGIN: "api/auth/login",
+  LOGOUT: "api/auth/logout",
 };

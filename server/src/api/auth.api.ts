@@ -7,6 +7,7 @@ import {
   resetPasswordSchema,
   loginUserSchema,
   changeOldPasswordSchema,
+  logoutUserSchema,
 } from "../validation/auth.validation";
 import {
   registerUser,
@@ -15,12 +16,14 @@ import {
   resetPassword,
   login,
   changePassword,
+  logout,
 } from "../controller/auth/index.auth.controller";
 import { AuthJWT } from "../middleware/authJWT.middleware";
 
 const router = express.Router();
 
 router.post("/login", validateSchema(loginUserSchema), login);
+router.post("/logout", validateSchema(logoutUserSchema), logout);
 router.post("/register", validateSchema(registerUserSchema), registerUser);
 router.post("/activate", validateSchema(activateUserSchema), activateUser);
 router.post(

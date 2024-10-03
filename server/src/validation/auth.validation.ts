@@ -65,6 +65,12 @@ export const loginUserSchema = object({
   }),
 });
 
+export const logoutUserSchema = object({
+  body: object({
+    _id: string({ required_error: "Should have id" }),
+  }),
+});
+
 export const changeOldPasswordSchema = object({
   body: object({
     oldPassword: string({ required_error: "Should have old password" }).min(6, {
@@ -81,6 +87,7 @@ export type activateUserInput = TypeOf<typeof activateUserSchema>["body"];
 export type forgotPasswordInput = TypeOf<typeof forgotPasswordSchema>["body"];
 export type resetPasswordInput = TypeOf<typeof resetPasswordSchema>["body"];
 export type loginUserInput = TypeOf<typeof loginUserSchema>["body"];
+export type logoutUserInput = TypeOf<typeof logoutUserSchema>["body"];
 export type changeOldPasswordInput = TypeOf<
   typeof changeOldPasswordSchema
 >["body"];
