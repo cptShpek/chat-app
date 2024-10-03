@@ -6,8 +6,8 @@ import { ApiRoutes } from "../constants/routes";
 import { useLocalStorage } from "./useLocalStorage";
 
 export const useFetch = (): [
-  loading: boolean,
-  appFetch: (
+  boolean,
+  (
     url: string,
     input: { method?: "GET" | "POST"; reqBody: any }
   ) => Promise<any>

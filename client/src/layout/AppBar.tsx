@@ -7,16 +7,20 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import React, { useCallback } from "react";
 import { User } from "../interfaces";
+import { AppBarMenu } from "./AppBarMenu";
 
 interface Props {
-  onClick: () => void;
   user: User;
+  onClick: () => void;
+  onLogout: () => void;
 }
 
-export const ButtonAppBar: React.FC<Props> = ({ onClick, user }) => {
+export const ButtonAppBar: React.FC<Props> = ({ user, onClick, onLogout }) => {
   const handleClick = useCallback(() => onClick(), [onClick]);
+  const handleLogout = useCallback(() => onLogout(), [onLogout]);
+
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box>
       <AppBar position="static">
         <Toolbar sx={{ justifyContent: "space-between" }}>
           <IconButton
@@ -28,9 +32,7 @@ export const ButtonAppBar: React.FC<Props> = ({ onClick, user }) => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="body1" component="div">
-            {user.name || "test"}
-          </Typography>
+          <AppBarMenu displayName={user.name} onLogout={handleLogout} />
         </Toolbar>
       </AppBar>
     </Box>
