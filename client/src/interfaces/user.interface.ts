@@ -1,7 +1,7 @@
 export interface User {
   createdAt: string;
   email: string;
-  isActive: string;
+  isActive: boolean;
   name: string;
   phoneNumber: string;
   role: string;

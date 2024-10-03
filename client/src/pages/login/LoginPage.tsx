@@ -18,6 +18,7 @@ import { ApiRoutes, AppRoutes } from "../../constants/routes";
 import { useFetch } from "../../hooks";
 import { AuthResponse } from "../../interfaces";
 import { useNavigate } from "react-router-dom";
+import { useUserContext } from "../../providers/user";
 
 const Container = styled("div")({
   height: "100vh",
@@ -38,6 +39,7 @@ const Paper = styled(Box)({
 
 export const LoginPage: React.FC = () => {
   const navigate = useNavigate();
+  const { setUser } = useUserContext();
   const [loading, appFetch] = useFetch();
   const [show, setShow] = useState(false);
   const [password, setPassword] = useState<string>("");
@@ -66,8 +68,9 @@ export const LoginPage: React.FC = () => {
       reqBody,
       method: "POST",
     });
-    if (response.success) {
+    if (response.success && response.user) {
       navigate(AppRoutes.HOME);
+      setUser(response.user);
     }
   };
 

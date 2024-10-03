@@ -6,31 +6,31 @@ import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import React, { useCallback } from "react";
+import { User } from "../interfaces";
 
 interface Props {
   onClick: () => void;
+  user: User;
 }
 
-export const ButtonAppBar: React.FC<Props> = ({ onClick }) => {
+export const ButtonAppBar: React.FC<Props> = ({ onClick, user }) => {
   const handleClick = useCallback(() => onClick(), [onClick]);
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
-        <Toolbar>
+        <Toolbar sx={{ justifyContent: "space-between" }}>
           <IconButton
             size="large"
             edge="start"
             color="inherit"
             aria-label="menu"
-            sx={{ mr: 2 }}
             onClick={handleClick}
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="body1" component="div" sx={{ flexGrow: 1 }}>
-            Chat App
+          <Typography variant="body1" component="div">
+            {user.name || "test"}
           </Typography>
-          <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
     </Box>
