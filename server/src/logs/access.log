@@ -112,3 +112,11 @@
  POST /api/auth/login 500 118.197 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:47:08 GMT 
  OPTIONS /api/auth/login 204 0.295 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:47:14 GMT
  POST /api/auth/login 200 156.364 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:47:14 GMT
+ OPTIONS /api/auth/login 204 1.613 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 13:12:29 GMT
+ POST /api/auth/login 200 205.419 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 13:12:29 GMT
+ OPTIONS /api/auth/login 204 0.722 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 13:16:17 GMT
+ POST /api/auth/login 400 3.478 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 13:16:17 GMT 
+ OPTIONS /api/auth/login 204 0.223 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 13:16:34 GMT
+ POST /api/auth/login 400 1.047 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 13:16:34 GMT 
+ OPTIONS /api/auth/login 204 0.207 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 13:16:41 GMT
+ POST /api/auth/login 200 272.731 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 13:16:41 GMT

@@ -14,8 +14,10 @@ import {
 } from "@mui/material";
 import { VisibilityOff, Visibility } from "@mui/icons-material";
 import { getInputValue } from "../../utils";
-import { ApiRoutes } from "../../constants/routes";
+import { ApiRoutes, AppRoutes } from "../../constants/routes";
 import { useFetch } from "../../hooks";
+import { AuthResponse } from "../../interfaces";
+import { useNavigate } from "react-router-dom";
 
 const Container = styled("div")({
   height: "100vh",
@@ -35,6 +37,7 @@ const Paper = styled(Box)({
 });
 
 export const LoginPage: React.FC = () => {
+  const navigate = useNavigate();
   const [loading, appFetch] = useFetch();
   const [show, setShow] = useState(false);
   const [password, setPassword] = useState<string>("");
@@ -59,7 +62,13 @@ export const LoginPage: React.FC = () => {
 
   const handleSubmit = async () => {
     const reqBody = { email, password };
-    appFetch(ApiRoutes.LOGIN, { reqBody, method: "POST" });
+    const response: AuthResponse = await appFetch(ApiRoutes.LOGIN, {
+      reqBody,
+      method: "POST",
+    });
+    if (response.success) {
+      navigate(AppRoutes.HOME);
+    }
   };
 
   return (

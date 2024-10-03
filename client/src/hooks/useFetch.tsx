@@ -33,11 +33,6 @@ export const useFetch = (): [
           success ? NotificationsVariants.SUCCESS : NotificationsVariants.ERROR
         );
         return body;
-        // if (success) {
-        //   return body;
-        // } else {
-        //   throw new Error(message);
-        // }
       } catch (err) {
         throw err;
       } finally {
