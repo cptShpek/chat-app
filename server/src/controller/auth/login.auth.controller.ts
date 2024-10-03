@@ -16,6 +16,8 @@ import { validateEnv } from "../../config/env.config";
 export const login = asyncHandler(
   async (req: Request<object, object, loginUserInput>, res: Response) => {
     const { password, email } = req.body;
+    const body = req.body;
+    console.log("LOGIN BODY: ", { body });
 
     // Find user by email
     const user = await findUser({ email }, { select: "+password", lean: true });

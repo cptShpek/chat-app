@@ -1,5 +1,5 @@
 import { connect, set } from "mongoose";
-import { validateEnv } from "../config/env.config";
+import { validateEnv } from "./env.config";
 
 const MONGO_DB_URI = validateEnv().MONGO_DB_URI;
 

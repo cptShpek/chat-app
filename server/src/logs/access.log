@@ -1,0 +1,114 @@
+ GET /api 304 3.433 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Tue, 01 Oct 2024 12:42:31 GMT
+ GET /api 304 3.624 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Tue, 01 Oct 2024 13:02:30 GMT
+ GET /api/roles 404 8.111 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Wed, 02 Oct 2024 08:34:07 GMT 
+ GET /api/role 200 36.047 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Wed, 02 Oct 2024 08:34:12 GMT
+ POST /api/role 404 3.139 ms PostmanRuntime/7.28.4 Wed, 02 Oct 2024 08:37:34 GMT 
+ POST /api/role/ 404 1.572 ms PostmanRuntime/7.28.4 Wed, 02 Oct 2024 08:37:55 GMT 
+ GET /api/role 200 40.067 ms PostmanRuntime/7.28.4 Wed, 02 Oct 2024 08:39:35 GMT
+ POST /api/role 404 8.973 ms PostmanRuntime/7.28.4 Wed, 02 Oct 2024 08:46:44 GMT 
+ POST /api/role 201 88.320 ms PostmanRuntime/7.28.4 Wed, 02 Oct 2024 08:47:53 GMT
+ POST /api/role 201 79.664 ms PostmanRuntime/7.28.4 Wed, 02 Oct 2024 08:48:18 GMT
+ GET /api/role 200 33.381 ms PostmanRuntime/7.28.4 Wed, 02 Oct 2024 08:48:22 GMT
+ POST /api/role 400 360.285 ms PostmanRuntime/7.28.4 Wed, 02 Oct 2024 09:13:22 GMT 
+ POST /api/auth/register 201 188.061 ms PostmanRuntime/7.28.4 Wed, 02 Oct 2024 09:37:28 GMT
+ POST /api/auth/register 400 18.628 ms PostmanRuntime/7.28.4 Wed, 02 Oct 2024 09:40:10 GMT 
+ POST /api/auth/register 201 176.117 ms PostmanRuntime/7.28.4 Wed, 02 Oct 2024 09:40:22 GMT
+ POST /api/auth/register 201 158.755 ms PostmanRuntime/7.28.4 Wed, 02 Oct 2024 09:40:48 GMT
+ POST /api/auth/register 201 167.041 ms PostmanRuntime/7.28.4 Wed, 02 Oct 2024 09:48:55 GMT
+ POST /api/auth/register 201 173.954 ms PostmanRuntime/7.28.4 Wed, 02 Oct 2024 09:49:29 GMT
+ POST /api/auth/register 201 175.247 ms PostmanRuntime/7.28.4 Wed, 02 Oct 2024 09:51:33 GMT
+ POST /api/auth/register 201 180.547 ms PostmanRuntime/7.28.4 Wed, 02 Oct 2024 09:52:21 GMT
+ POST /api/auth/register 201 712.359 ms PostmanRuntime/7.28.4 Wed, 02 Oct 2024 09:54:27 GMT
+ POST /api/auth/register 201 605.895 ms PostmanRuntime/7.28.4 Wed, 02 Oct 2024 09:56:22 GMT
+ POST /api/auth/register 201 2015.288 ms PostmanRuntime/7.28.4 Wed, 02 Oct 2024 10:02:13 GMT
+ POST /api/auth/register 201 163.171 ms PostmanRuntime/7.28.4 Wed, 02 Oct 2024 10:42:01 GMT
+ POST /api/auth/register 201 167.344 ms PostmanRuntime/7.28.4 Wed, 02 Oct 2024 10:44:06 GMT
+ POST /api/auth/register 201 151.754 ms PostmanRuntime/7.28.4 Wed, 02 Oct 2024 10:44:29 GMT
+ POST /api/auth/register 201 141.428 ms PostmanRuntime/7.28.4 Wed, 02 Oct 2024 10:44:45 GMT
+ POST /api/auth/register 201 121.423 ms PostmanRuntime/7.28.4 Wed, 02 Oct 2024 10:45:25 GMT
+ POST /api/auth/register 201 202.587 ms PostmanRuntime/7.28.4 Wed, 02 Oct 2024 10:46:24 GMT
+ POST /api/auth/register 201 190.111 ms PostmanRuntime/7.28.4 Wed, 02 Oct 2024 10:47:18 GMT
+ POST /api/auth/register 201 184.978 ms PostmanRuntime/7.28.4 Wed, 02 Oct 2024 10:48:03 GMT
+ GET / 404 5.666 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 09:26:14 GMT 
+ GET /api 304 5.116 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 09:26:16 GMT
+ POST /api/auth/register 201 200.254 ms PostmanRuntime/7.28.4 Thu, 03 Oct 2024 09:27:34 GMT
+ POST /api/auth/register 201 259.252 ms PostmanRuntime/7.28.4 Thu, 03 Oct 2024 09:34:15 GMT
+ POST /api/auth/activate 400 13.158 ms PostmanRuntime/7.28.4 Thu, 03 Oct 2024 09:35:42 GMT 
+ POST /api/auth/activate 400 14.580 ms PostmanRuntime/7.28.4 Thu, 03 Oct 2024 09:36:30 GMT 
+ POST /api/auth/activate 201 94.017 ms PostmanRuntime/7.28.4 Thu, 03 Oct 2024 09:36:40 GMT
+ POST /api/auth/forgotPassword 400 14.643 ms PostmanRuntime/7.28.4 Thu, 03 Oct 2024 09:42:58 GMT 
+ POST /api/auth/forgotPassword 500 43.196 ms PostmanRuntime/7.28.4 Thu, 03 Oct 2024 09:43:07 GMT 
+ POST /api/auth/forgotPassword 201 102.801 ms PostmanRuntime/7.28.4 Thu, 03 Oct 2024 09:43:17 GMT
+ POST /api/auth/resetPassword 200 172.656 ms PostmanRuntime/7.28.4 Thu, 03 Oct 2024 09:49:09 GMT
+ POST /api/auth/login 200 193.299 ms PostmanRuntime/7.28.4 Thu, 03 Oct 2024 09:58:08 GMT
+ POST /api/auth/changePassword 200 259.575 ms PostmanRuntime/7.28.4 Thu, 03 Oct 2024 10:02:44 GMT
+ POST /api/auth/login 500 10.705 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 11:19:39 GMT 
+ POST /api/auth/login 500 10.588 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 11:21:04 GMT 
+ POST /api/auth/login 500 1.927 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 11:21:11 GMT 
+ POST /api/auth/login 400 4.729 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 11:21:37 GMT 
+ POST /api/auth/login 400 1.480 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 11:21:57 GMT 
+ POST /api/auth/login 500 9.639 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 11:25:20 GMT 
+ POST /api/auth/login 500 1.207 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 11:26:10 GMT 
+ POST /api/auth/login 500 14.154 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 11:26:54 GMT 
+ POST /api/auth/login 500 9.442 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 11:27:20 GMT 
+ POST /api/auth/login 400 5.537 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 11:27:37 GMT 
+ POST /api/auth/login 400 6.396 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 11:28:32 GMT 
+ POST /api/auth/login 500 52.368 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 11:29:04 GMT 
+ POST /api/auth/login 400 5.583 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 11:31:06 GMT 
+ POST /api/auth/login 500 46.572 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 11:31:49 GMT 
+ POST /api/auth/login 500 39.200 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:00:56 GMT 
+ OPTIONS /api/auth/login 204 1.319 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:01:54 GMT
+ POST /api/auth/login 400 19.347 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:01:54 GMT 
+ OPTIONS /api/auth/login 204 1.438 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:02:22 GMT
+ POST /api/auth/login 500 50.325 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:02:23 GMT 
+ OPTIONS /api/auth/login 204 1.595 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:04:10 GMT
+ POST /api/auth/login 400 13.961 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:04:10 GMT 
+ OPTIONS /api/auth/login 204 0.133 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:06:37 GMT
+ POST /api/auth/login 200 163.418 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:06:38 GMT
+ OPTIONS /api/auth/login 204 0.253 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:07:23 GMT
+ POST /api/auth/login 400 1.344 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:07:23 GMT 
+ OPTIONS /api/auth/login 204 0.319 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:09:18 GMT
+ POST /api/auth/login 400 1.856 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:09:18 GMT 
+ OPTIONS /api/auth/login 204 0.184 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:10:30 GMT
+ POST /api/auth/login 400 2.045 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:10:30 GMT 
+ OPTIONS /api/auth/login 204 0.331 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:11:34 GMT
+ POST /api/auth/login 500 111.686 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:11:35 GMT 
+ OPTIONS /api/auth/login 204 0.085 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:12:27 GMT
+ POST /api/auth/login 200 145.233 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:12:28 GMT
+ OPTIONS /api/auth/login 204 0.205 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:14:44 GMT
+ POST /api/auth/login 200 125.502 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:14:44 GMT
+ OPTIONS /api/auth/login 204 0.280 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:15:41 GMT
+ POST /api/auth/login 200 187.838 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:15:41 GMT
+ OPTIONS /api/auth/login 204 0.250 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:17:14 GMT
+ POST /api/auth/login 200 139.263 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:17:14 GMT
+ OPTIONS /api/auth/login 204 0.217 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:18:08 GMT
+ POST /api/auth/login 200 143.329 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:18:08 GMT
+ OPTIONS /api/auth/login 204 0.768 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:19:06 GMT
+ POST /api/auth/login 200 137.403 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:19:06 GMT
+ OPTIONS /api/auth/login 204 1.213 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:19:23 GMT
+ POST /api/auth/login 200 131.260 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:19:23 GMT
+ OPTIONS /api/auth/login 204 1.412 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:19:37 GMT
+ POST /api/auth/login 500 53.219 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:19:37 GMT 
+ OPTIONS /api/auth/login 204 1.267 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:21:32 GMT
+ POST /api/auth/login 500 96.543 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:21:32 GMT 
+ OPTIONS /api/auth/login 204 0.193 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:23:13 GMT
+ POST /api/auth/login 500 31.963 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:23:13 GMT 
+ OPTIONS /api/auth/login 204 0.174 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:27:55 GMT
+ POST /api/auth/login 200 149.414 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:27:55 GMT
+ OPTIONS /api/auth/login 204 0.249 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:28:52 GMT
+ POST /api/auth/login 200 152.674 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:28:52 GMT
+ OPTIONS /api/auth/login 204 0.427 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:31:28 GMT
+ POST /api/auth/login 400 3.960 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:31:28 GMT 
+ OPTIONS /api/auth/login 204 0.745 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:40:43 GMT
+ POST /api/auth/login 400 1.725 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:40:43 GMT 
+ OPTIONS /api/auth/login 204 0.263 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:40:55 GMT
+ POST /api/auth/login 200 144.877 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:40:55 GMT
+ OPTIONS /api/auth/login 204 0.615 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:46:17 GMT
+ POST /api/auth/login 400 4.797 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:46:17 GMT 
+ OPTIONS /api/auth/login 204 0.221 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:46:56 GMT
+ POST /api/auth/login 400 1.965 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:46:56 GMT 
+ POST /api/auth/login 400 1.281 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:46:58 GMT 
+ OPTIONS /api/auth/login 204 0.529 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:47:07 GMT
+ POST /api/auth/login 500 118.197 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:47:08 GMT 
+ OPTIONS /api/auth/login 204 0.295 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:47:14 GMT
+ POST /api/auth/login 200 156.364 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Thu, 03 Oct 2024 12:47:14 GMT

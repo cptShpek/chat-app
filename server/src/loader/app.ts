@@ -39,6 +39,7 @@ export const bootstrapExpress = (app: any) => {
   app.use(cors(corsOptions));
   app.use(cookieParser());
   app.use(bodyParser.urlencoded({ extended: true, limit: "30mb" }));
+  app.use(bodyParser.json({ limit: "30mb" }));
   app.use("/api/", api);
   app.use(notFoundMiddleware);
   app.use(errorHandlerMiddleware);
