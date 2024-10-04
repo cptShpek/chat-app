@@ -2,30 +2,21 @@ import React, { useCallback, useMemo, useState } from "react";
 import {
   Button,
   FormControl,
-  IconButton,
   Input,
-  InputAdornment,
   InputLabel,
   Typography,
 } from "@mui/material";
-import { VisibilityOff, Visibility } from "@mui/icons-material";
 import { getInputValue } from "../../../utils";
+import { PasswordInput } from "../../../components/enhanced";
 
 interface Props {
   onLogin: (input: { email: string; password: string }) => void;
 }
 
 export const Login: React.FC<Props> = ({ onLogin }) => {
-  const [show, setShow] = useState(false);
   const [password, setPassword] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const empty = useMemo(() => !password || !email, [password, email]);
-
-  const handleMouseDownUpPassword = (
-    event: React.MouseEvent<HTMLButtonElement>
-  ) => {
-    event.preventDefault();
-  };
 
   const handlePasswordChange = (e: any) => {
     const value = getInputValue(e);
@@ -54,29 +45,7 @@ export const Login: React.FC<Props> = ({ onLogin }) => {
           onChange={handleUsernameChange}
         />
       </FormControl>
-      <FormControl fullWidth required>
-        <InputLabel htmlFor="password">Password</InputLabel>
-        <Input
-          id="password"
-          type={show ? "text" : "password"}
-          value={password}
-          onChange={handlePasswordChange}
-          placeholder="password"
-          endAdornment={
-            <InputAdornment position="end">
-              <IconButton
-                aria-label="toggle password visibility"
-                onClick={() => setShow((v) => !v)}
-                onMouseDown={handleMouseDownUpPassword}
-                onMouseUp={handleMouseDownUpPassword}
-                edge="end"
-              >
-                {show ? <VisibilityOff /> : <Visibility />}
-              </IconButton>
-            </InputAdornment>
-          }
-        />
-      </FormControl>
+      <PasswordInput value={password} onChange={handlePasswordChange} />
       <Button
         disabled={empty}
         fullWidth
