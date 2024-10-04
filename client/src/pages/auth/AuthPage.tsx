@@ -1,9 +1,12 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import { Login } from "./login";
 import styled from "@emotion/styled";
 import { Backdrop, Box, Button, CircularProgress } from "@mui/material";
 import { SignUp } from "./signUp";
-import { useLogin } from "../../hooks";
+import { useActivateUser, useLogin, useSignUp } from "../../hooks";
+import { UserInput } from "../../interfaces/userInput.interface";
+import { ConfirmCode } from "./confirmCode";
+import { ActivateUser } from "../../interfaces";
 
 const Container = styled("div")({
   height: "100vh",
@@ -23,14 +26,40 @@ const Paper = styled(Box)({
 });
 
 export const AuthPage: React.FC = () => {
-  const loading = false;
-  const [isLogin, setIsLogin] = useState(true);
+  const [isLogin, setIsLogin] = useState(false);
   const { loading: loginLoading, login } = useLogin();
+  const { loading: signUpLoading, codeSend, setCodeSend, signUp } = useSignUp();
+  const { loading: activateLoading, activateUser } = useActivateUser();
+  const loading = useMemo(
+    () => loginLoading || signUpLoading || activateLoading,
+    [signUpLoading, loginLoading, activateLoading]
+  );
 
   const handleLogin = useCallback(
     (input: { email: string; password: string }) => login(input),
     [login]
   );
+
+  const handleSignUp = useCallback(
+    (input: UserInput) => signUp(input),
+    [signUp]
+  );
+
+  const handleCodeConfirm = useCallback(
+    async (input: ActivateUser) => {
+      const { success } = await activateUser(input);
+      if (success) {
+        setIsLogin(true);
+        setCodeSend(false);
+      }
+    },
+    [setIsLogin, setCodeSend, activateUser]
+  );
+
+  const handleModeChange = useCallback(() => {
+    setIsLogin((v) => !v);
+    setCodeSend(false);
+  }, [setCodeSend]);
 
   return (
     <Container>
@@ -41,14 +70,14 @@ export const AuthPage: React.FC = () => {
         <CircularProgress />
       </Backdrop>
       <Paper>
-        {isLogin ? <Login onLogin={handleLogin} /> : <SignUp />}
-        <Button
-          fullWidth
-          variant="outlined"
-          onClick={() => setIsLogin((v) => !v)}
-        >
-          {isLogin ? "SignUp" : "Log in with existing account"}
-        </Button>
+        {isLogin && !codeSend && <Login onLogin={handleLogin} />}
+        {!isLogin && !codeSend && <SignUp onSignUp={handleSignUp} />}
+        {codeSend && <ConfirmCode onCodeConfirm={handleCodeConfirm} />}
+        {!codeSend && (
+          <Button fullWidth variant="outlined" onClick={handleModeChange}>
+            {isLogin ? "SignUp" : "Log in with existing account"}
+          </Button>
+        )}
       </Paper>
     </Container>
   );

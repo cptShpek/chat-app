@@ -6,8 +6,8 @@ import {
   InputLabel,
   Typography,
 } from "@mui/material";
-import { getInputValue } from "../../../utils";
 import { PasswordInput } from "../../../components/enhanced";
+import { useHandleInputChange } from "../../../hooks";
 
 interface Props {
   onLogin: (input: { email: string; password: string }) => void;
@@ -18,15 +18,9 @@ export const Login: React.FC<Props> = ({ onLogin }) => {
   const [email, setEmail] = useState<string>("");
   const empty = useMemo(() => !password || !email, [password, email]);
 
-  const handlePasswordChange = (e: any) => {
-    const value = getInputValue(e);
-    setPassword(value);
-  };
+  const handlePasswordChange = useHandleInputChange(setPassword);
 
-  const handleUsernameChange = (e: any) => {
-    const value = getInputValue(e);
-    setEmail(value);
-  };
+  const handleEmailChange = useHandleInputChange(setEmail);
 
   const handleSubmit = useCallback(
     () => onLogin({ email, password }),
@@ -37,12 +31,12 @@ export const Login: React.FC<Props> = ({ onLogin }) => {
     <>
       <Typography variant="h2">Login</Typography>
       <FormControl fullWidth required>
-        <InputLabel htmlFor="email">Username</InputLabel>
+        <InputLabel htmlFor="email">Email</InputLabel>
         <Input
           id="email"
           placeholder="email"
           value={email}
-          onChange={handleUsernameChange}
+          onChange={handleEmailChange}
         />
       </FormControl>
       <PasswordInput value={password} onChange={handlePasswordChange} />
