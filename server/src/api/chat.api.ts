@@ -1,16 +1,18 @@
 import express from "express";
-import {
-  createRole,
-  getAllRoles,
-  getRoleById,
-} from "../controller/role/index.role.controller";
 import validateSchema from "../middleware/validateSchema.middleware";
-import { chatRequestSchema } from "../validation/chat.validation";
-import { chatRequest } from "../controller/chat/request.controller";
+import {
+  chatRequestSchema,
+  getChatRequestsSchema,
+} from "../validation/chat.validation";
+import {
+  chatRequest,
+  getChatRequests,
+} from "../controller/chat/index.chat.controller";
 
 const router = express.Router();
 
 // Create a new role
 router.post("/request", validateSchema(chatRequestSchema), chatRequest);
+router.post("/all", validateSchema(getChatRequestsSchema), getChatRequests);
 
 export default router;

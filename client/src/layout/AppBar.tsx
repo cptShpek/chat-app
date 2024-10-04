@@ -1,8 +1,6 @@
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import React, { useCallback } from "react";
@@ -13,11 +11,21 @@ interface Props {
   user: User;
   onClick: () => void;
   onLogout: () => void;
+  onChatRequests: () => void;
 }
 
-export const ButtonAppBar: React.FC<Props> = ({ user, onClick, onLogout }) => {
+export const ButtonAppBar: React.FC<Props> = ({
+  user,
+  onClick,
+  onLogout,
+  onChatRequests,
+}) => {
   const handleClick = useCallback(() => onClick(), [onClick]);
   const handleLogout = useCallback(() => onLogout(), [onLogout]);
+  const handleChatRequests = useCallback(
+    () => onChatRequests(),
+    [onChatRequests]
+  );
 
   return (
     <Box>
@@ -32,7 +40,11 @@ export const ButtonAppBar: React.FC<Props> = ({ user, onClick, onLogout }) => {
           >
             <MenuIcon />
           </IconButton>
-          <AppBarMenu displayName={user.name} onLogout={handleLogout} />
+          <AppBarMenu
+            displayName={user.name}
+            onLogout={handleLogout}
+            onChatRequests={handleChatRequests}
+          />
         </Toolbar>
       </AppBar>
     </Box>

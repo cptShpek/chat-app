@@ -1,8 +1,10 @@
 import chatRequestModel from "../model/chatRequest.model";
 import { IChatRequest } from "../interfaces/chatRequest.interface";
 
-export const getAllRequests = async (_id: string) => {
-  return await chatRequestModel.find({ to: _id }).exec();
+export const getAllChatRequests = async (email: string) => {
+  return await chatRequestModel
+    .find({ $or: [{ from: email }, { to: email }] })
+    .exec();
 };
 
 export const isChatRequestExist = async (
@@ -10,8 +12,10 @@ export const isChatRequestExist = async (
 ): Promise<boolean> => {
   const { from, to } = data;
   try {
-    const existingChat = await chatRequestModel.find({ to, from }).exec();
-    return true;
+    const existingChatRequest = await chatRequestModel
+      .findOne({ from, to })
+      .exec();
+    return existingChatRequest ? true : false;
   } catch (e) {
     console.log({ e });
     return false;

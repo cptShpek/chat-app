@@ -15,6 +15,7 @@ export const useFetch = (): [
   const [getItem, setItem] = useLocalStorage();
   const [loading, setLoading] = useState(false);
   const notification = useNotification();
+
   const appFetch = useCallback(
     async (url: string, input: { method?: "GET" | "POST"; reqBody: any }) => {
       try {
@@ -28,7 +29,7 @@ export const useFetch = (): [
             "Access-Control-Max-Age": "600",
             "Content-Type": "application/json; charset=utf-8",
             "Access-Control-Allow-Origin": "*",
-            Authorization: token || "",
+            Authorization: "Bearer " + token || "",
           },
         });
         const body: AppResponse = await response.json();

@@ -17,7 +17,7 @@ export const chatRequest = asyncHandler(
     const { from, to } = req.body;
 
     // Find user by email
-    const fromUser = await findUser({ _id: from });
+    const fromUser = await findUser({ email: from });
 
     if (!fromUser)
       throw new BadRequestError("User does not exist", ErrorCode.BAD_REQUEST);
@@ -25,7 +25,7 @@ export const chatRequest = asyncHandler(
       throw new BadRequestError("User not active", ErrorCode.BAD_REQUEST);
 
     // Find user by email
-    const toUser = await findUser({ _id: from });
+    const toUser = await findUser({ email: to });
 
     if (!toUser)
       throw new BadRequestError(
@@ -40,7 +40,6 @@ export const chatRequest = asyncHandler(
 
     const chatRequest = {
       from,
-      fromEmail: fromUser.email,
       to,
     };
 
@@ -52,8 +51,12 @@ export const chatRequest = asyncHandler(
       );
     }
 
-    await createChatRequest(chatRequest);
+    const request = await createChatRequest(chatRequest);
 
-    res.status(201).json({ message: "Chat Request Send", success: true });
+    res.status(201).json({
+      message: "Chat Request Send",
+      success: true,
+      chatRequest: { ...chatRequest },
+    });
   }
 );

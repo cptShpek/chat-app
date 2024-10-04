@@ -26,7 +26,7 @@ const Paper = styled(Box)({
 });
 
 export const AuthPage: React.FC = () => {
-  const [isLogin, setIsLogin] = useState(false);
+  const [isLogin, setIsLogin] = useState(true);
   const { loading: loginLoading, login } = useLogin();
   const { loading: signUpLoading, codeSend, setCodeSend, signUp } = useSignUp();
   const { loading: activateLoading, activateUser } = useActivateUser();

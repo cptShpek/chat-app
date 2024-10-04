@@ -19,6 +19,6 @@ export const findUserByEmailController = asyncHandler(
 
     res
       .status(201)
-      .json({ message: "Verified successfully", success: true, user });
+      .json({ message: "We find your user!", success: true, user });
   }
 );

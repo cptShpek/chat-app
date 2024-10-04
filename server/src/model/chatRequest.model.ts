@@ -7,10 +7,6 @@ const chatRequestSchema = new Schema<IChatRequest>(
       type: String,
       required: [true, "From ID is required"],
     },
-    fromEmail: {
-      type: String,
-      required: [true, "From email is required"],
-    },
     to: {
       type: String,
       required: [true, "To ID is required"],
@@ -18,4 +14,4 @@ const chatRequestSchema = new Schema<IChatRequest>(
   },
   { timestamps: true }
 );
-export default model<IChatRequest>("Chat", chatRequestSchema);
+export default model<IChatRequest>("ChatRequest", chatRequestSchema);
