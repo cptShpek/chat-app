@@ -11,4 +11,5 @@ export const ApiRoutes = {
   FIND_USER_BY_EMAIL: "api/user/findByEmail",
   GET_ALL_CHAT_REQUESTS: "api/chat/all",
   CHAT_REQUEST: "api/chat/request",
+  CHAT_REQUEST_STATUS: "api/chat/request/status",
 };

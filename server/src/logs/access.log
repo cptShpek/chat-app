@@ -241,3 +241,45 @@
  POST /api/chat/all 201 39.557 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Fri, 04 Oct 2024 14:44:01 GMT
  OPTIONS /api/chat/all 204 0.275 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Fri, 04 Oct 2024 14:44:06 GMT
  POST /api/chat/all 201 47.789 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Fri, 04 Oct 2024 14:44:06 GMT
+ OPTIONS /api/auth/logout 204 0.586 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Fri, 04 Oct 2024 14:47:45 GMT
+ POST /api/auth/logout 200 88.999 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Fri, 04 Oct 2024 14:47:46 GMT
+ OPTIONS /api/auth/login 204 0.169 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Fri, 04 Oct 2024 14:47:50 GMT
+ POST /api/auth/login 200 163.434 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Fri, 04 Oct 2024 14:47:51 GMT
+ OPTIONS /api/chat/all 204 0.293 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Fri, 04 Oct 2024 14:47:51 GMT
+ OPTIONS /api/chat/all 204 0.059 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Fri, 04 Oct 2024 14:47:51 GMT
+ POST /api/chat/all 201 29.840 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Fri, 04 Oct 2024 14:47:51 GMT
+ POST /api/chat/all 201 28.979 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Fri, 04 Oct 2024 14:47:51 GMT
+ OPTIONS /api/chat/all 204 0.398 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Fri, 04 Oct 2024 14:50:43 GMT
+ POST /api/chat/all 201 34.871 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Fri, 04 Oct 2024 14:50:43 GMT
+ OPTIONS /api/chat/all 204 0.155 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Fri, 04 Oct 2024 14:54:16 GMT
+ OPTIONS /api/chat/all 204 0.245 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Fri, 04 Oct 2024 14:54:16 GMT
+ POST /api/chat/all 201 29.912 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Fri, 04 Oct 2024 14:54:16 GMT
+ POST /api/chat/all 201 26.744 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Fri, 04 Oct 2024 14:54:16 GMT
+ OPTIONS /api/chat/all 204 0.183 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Fri, 04 Oct 2024 14:56:25 GMT
+ OPTIONS /api/chat/all 204 0.133 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Fri, 04 Oct 2024 14:56:25 GMT
+ POST /api/chat/all 201 36.363 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Fri, 04 Oct 2024 14:56:25 GMT
+ POST /api/chat/all 201 42.859 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Fri, 04 Oct 2024 14:56:25 GMT
+ OPTIONS /api/chat/all 204 0.061 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Fri, 04 Oct 2024 14:56:44 GMT
+ POST /api/chat/all 201 27.942 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Fri, 04 Oct 2024 14:56:44 GMT
+ OPTIONS /api/chat/all 204 0.169 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Fri, 04 Oct 2024 14:58:24 GMT
+ POST /api/chat/all 201 31.649 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Fri, 04 Oct 2024 14:58:24 GMT
+ OPTIONS /api/chat/all 204 0.068 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Fri, 04 Oct 2024 14:58:31 GMT
+ POST /api/chat/all 201 31.092 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Fri, 04 Oct 2024 14:58:31 GMT
+ OPTIONS /api/chat/all 204 0.058 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Fri, 04 Oct 2024 14:58:44 GMT
+ POST /api/chat/all 201 25.937 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Fri, 04 Oct 2024 14:58:44 GMT
+ OPTIONS /api/chat/all 204 0.254 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Fri, 04 Oct 2024 14:58:54 GMT
+ POST /api/chat/all 201 31.448 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Fri, 04 Oct 2024 14:58:54 GMT
+ OPTIONS /api/chat/all 204 0.930 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Fri, 04 Oct 2024 15:18:49 GMT
+ POST /api/chat/all 201 62.978 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Fri, 04 Oct 2024 15:18:49 GMT
+ OPTIONS /api/chat/request/status 204 0.196 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Fri, 04 Oct 2024 15:18:55 GMT
+ POST /api/chat/request/status 404 10.523 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Fri, 04 Oct 2024 15:18:55 GMT 
+ OPTIONS /api/chat/all 204 3.573 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Fri, 04 Oct 2024 15:21:23 GMT
+ POST /api/chat/all 201 114.310 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Fri, 04 Oct 2024 15:21:23 GMT
+ OPTIONS /api/chat/request/status 204 0.314 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Fri, 04 Oct 2024 15:21:28 GMT
+ POST /api/chat/request/status 404 81.290 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Fri, 04 Oct 2024 15:21:28 GMT 
+ OPTIONS /api/chat/all 204 1.800 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Fri, 04 Oct 2024 15:21:39 GMT
+ POST /api/chat/all 201 481.718 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Fri, 04 Oct 2024 15:21:39 GMT
+ OPTIONS /api/chat/request/status 204 0.255 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Fri, 04 Oct 2024 15:21:42 GMT
+ POST /api/chat/request/status 201 269.888 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Fri, 04 Oct 2024 15:21:43 GMT
+ OPTIONS /api/chat/all 204 0.138 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Fri, 04 Oct 2024 15:21:50 GMT
+ POST /api/chat/all 201 112.146 ms Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36 Fri, 04 Oct 2024 15:21:51 GMT

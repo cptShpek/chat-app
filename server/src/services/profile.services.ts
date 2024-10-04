@@ -1,4 +1,4 @@
-import { FilterQuery, QueryOptions, UpdateQuery } from "mongoose";
+import { FilterQuery, ObjectId, QueryOptions, UpdateQuery } from "mongoose";
 import { IProfile } from "../interfaces/profile.interface";
 import ProfileModel from "../model/profile.model";
 
@@ -27,7 +27,9 @@ export const findProfile = async (
   return await ProfileModel.findOne(query, {}, options);
 };
 
-export const createProfile = async (profileData: Partial<IProfile>) => {
+export const createProfile = async (
+  profileData: Partial<IProfile> | ObjectId
+) => {
   try {
     const result = await ProfileModel.create(profileData);
     return { data: result, success: true };

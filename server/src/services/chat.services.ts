@@ -1,10 +1,16 @@
 import chatRequestModel from "../model/chatRequest.model";
 import { IChatRequest } from "../interfaces/chatRequest.interface";
+import chatModel from "../model/chat.model";
+import { ObjectId } from "mongoose";
 
 export const getAllChatRequests = async (email: string) => {
   return await chatRequestModel
     .find({ $or: [{ from: email }, { to: email }] })
     .exec();
+};
+
+export const getChatRequestById = async (_id: string) => {
+  return await chatRequestModel.findOne({ _id }).exec();
 };
 
 export const isChatRequestExist = async (
@@ -35,4 +41,11 @@ export const createChatRequest = async (
 
 export const deleteChatRequest = async (id: string) => {
   return await chatRequestModel.deleteOne({ _id: id });
+};
+
+export const createChat = async (userIds: ObjectId[]) => {
+  return await chatModel.create({
+    messages: [],
+    userIds,
+  });
 };

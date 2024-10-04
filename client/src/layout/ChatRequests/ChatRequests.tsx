@@ -14,6 +14,7 @@ import { ChatRequest, User } from "../../interfaces";
 import { MakeChatRequest } from "./MakeСhatRequest";
 import Divider from "@mui/material/Divider";
 import DeleteIcon from "@mui/icons-material/Delete";
+import CheckIcon from "@mui/icons-material/Check";
 
 interface Props {
   open: boolean;
@@ -23,6 +24,7 @@ interface Props {
   onClose: () => void;
   onSearch: (email: string) => void;
   onChatRequestSubmit: () => void;
+  onChatRequestStatusSubmit: (input: { _id: string; status: boolean }) => void;
 }
 
 export const ChatRequestsDialog: React.FC<Props> = ({
@@ -33,6 +35,7 @@ export const ChatRequestsDialog: React.FC<Props> = ({
   onClose,
   onSearch,
   onChatRequestSubmit,
+  onChatRequestStatusSubmit,
 }) => {
   const incomingRequests = useMemo(
     () => chatRequests.filter((cr) => cr.to === user.email),
@@ -50,6 +53,16 @@ export const ChatRequestsDialog: React.FC<Props> = ({
   const handleChatRequestSubmit = useCallback(
     () => onChatRequestSubmit(),
     [onChatRequestSubmit]
+  );
+
+  const handleChatRequestAccept = useCallback(
+    (_id: string) => onChatRequestStatusSubmit({ _id, status: true }),
+    [onChatRequestStatusSubmit]
+  );
+
+  const handleChatRequestReject = useCallback(
+    (_id: string) => onChatRequestStatusSubmit({ _id, status: false }),
+    [onChatRequestStatusSubmit]
   );
 
   return (
@@ -70,12 +83,33 @@ export const ChatRequestsDialog: React.FC<Props> = ({
           <Typography variant="h6">Incoming Requests</Typography>
           {incomingRequests.length > 0 && (
             <List>
-              {incomingRequests.map((v) => (
+              {incomingRequests.map((v, i) => (
                 <ListItem
+                  key={i}
                   secondaryAction={
-                    <IconButton edge="end">
-                      <DeleteIcon />
-                    </IconButton>
+                    <Box
+                      sx={{
+                        display: "flex",
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                        width: "70px",
+                      }}
+                    >
+                      <IconButton
+                        edge="end"
+                        color="primary"
+                        onClick={() => handleChatRequestAccept(v._id)}
+                      >
+                        <CheckIcon />
+                      </IconButton>
+                      <IconButton
+                        edge="end"
+                        color="error"
+                        onClick={() => handleChatRequestReject(v._id)}
+                      >
+                        <DeleteIcon />
+                      </IconButton>
+                    </Box>
                   }
                 >
                   {v.from}
@@ -92,10 +126,14 @@ export const ChatRequestsDialog: React.FC<Props> = ({
           <Typography variant="h6">Your Requests</Typography>
           {outgoingRequests.length > 0 && (
             <List>
-              {outgoingRequests.map((v) => (
+              {outgoingRequests.map((v, i) => (
                 <ListItem
+                  key={i}
                   secondaryAction={
-                    <IconButton edge="end">
+                    <IconButton
+                      edge="end"
+                      onClick={() => handleChatRequestReject(v._id)}
+                    >
                       <DeleteIcon />
                     </IconButton>
                   }

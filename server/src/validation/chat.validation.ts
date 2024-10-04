@@ -1,4 +1,4 @@
-import { object, string, TypeOf } from "zod";
+import { boolean, object, string, TypeOf } from "zod";
 
 export const chatRequestSchema = object({
   body: object({
@@ -13,5 +13,15 @@ export const getChatRequestsSchema = object({
   }),
 });
 
+export const chatRequestStatusSchema = object({
+  body: object({
+    _id: string({ required_error: "Should have id" }),
+    status: boolean({ required_error: "Should have status" }),
+  }),
+});
+
 export type chatRequestInput = TypeOf<typeof chatRequestSchema>["body"];
 export type getChatRequestsInput = TypeOf<typeof getChatRequestsSchema>["body"];
+export type chatRequestStatusInput = TypeOf<
+  typeof chatRequestStatusSchema
+>["body"];

@@ -31,25 +31,31 @@ export const Layout: React.FC = () => {
 
   const handleRequestsClose = useCallback(() => setRequestsOpen(false), []);
 
-  const handleSearchUser = useCallback(async (email: string) => {
-    const response = await appFetch(ApiRoutes.FIND_USER_BY_EMAIL, {
-      method: "POST",
-      reqBody: { email },
-    });
-    if (response.success) {
-      setRequestedUser(response.user);
-    }
-  }, []);
+  const handleSearchUser = useCallback(
+    async (email: string) => {
+      const response = await appFetch(ApiRoutes.FIND_USER_BY_EMAIL, {
+        method: "POST",
+        reqBody: { email },
+      });
+      if (response.success) {
+        setRequestedUser(response.user);
+      }
+    },
+    [setRequestedUser, appFetch]
+  );
 
-  const getChatRequests = useCallback(async (email: string) => {
-    const response = await appFetch(ApiRoutes.GET_ALL_CHAT_REQUESTS, {
-      method: "POST",
-      reqBody: { email },
-    });
-    if (response.success) {
-      setChatRequests(() => [...response.chatRequests]);
-    }
-  }, []);
+  const getChatRequests = useCallback(
+    async (email: string) => {
+      const response = await appFetch(ApiRoutes.GET_ALL_CHAT_REQUESTS, {
+        method: "POST",
+        reqBody: { email },
+      });
+      if (response.success) {
+        setChatRequests(() => [...response.chatRequests]);
+      }
+    },
+    [appFetch, setChatRequests]
+  );
 
   const handleChatRequestSubmit = useCallback(async () => {
     const reqBody = { from: user.email, to: requestedUser?.email };
@@ -61,6 +67,19 @@ export const Layout: React.FC = () => {
       setChatRequests((v) => [...v, response.chatRequest]);
     }
   }, [user, requestedUser, appFetch]);
+
+  const handleChatRequestStatusSubmit = useCallback(
+    async (reqBody: { _id: string; status: boolean }) => {
+      const response = await appFetch(ApiRoutes.CHAT_REQUEST_STATUS, {
+        method: "POST",
+        reqBody,
+      });
+      if (response.success) {
+        setChatRequests((cr) => cr.filter((v) => v._id !== reqBody._id));
+      }
+    },
+    [appFetch, setChatRequests]
+  );
 
   useEffect(() => {
     if (!user || !user.isActive) {
@@ -91,6 +110,7 @@ export const Layout: React.FC = () => {
         onClose={handleRequestsClose}
         onSearch={handleSearchUser}
         onChatRequestSubmit={handleChatRequestSubmit}
+        onChatRequestStatusSubmit={handleChatRequestStatusSubmit}
       />
       <ButtonAppBar
         onClick={handleAppBarClick}
