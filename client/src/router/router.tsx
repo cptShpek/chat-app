@@ -1,10 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
 import { HomePage } from "../pages/home";
 import { AppRoutes } from "../constants/routes";
-import { LoginPage } from "../pages/login";
 import { ConfigureProviders } from "../providers";
 import { Layout } from "../layout";
 import { getLastPartOfString } from "../utils";
+import { AuthPage } from "../pages/auth";
 
 export const router = createBrowserRouter([
   {
@@ -23,7 +23,7 @@ export const router = createBrowserRouter([
       },
       {
         path: AppRoutes.LOGIN,
-        element: <LoginPage />,
+        element: <AuthPage />,
       },
     ],
   },

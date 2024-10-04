@@ -20,7 +20,7 @@ export const useLogin = () => {
         setUser(response.user);
       }
     },
-    []
+    [appFetch, navigate, setUser]
   );
   return { loading, login };
 };
