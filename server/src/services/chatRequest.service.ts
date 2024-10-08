@@ -1,7 +1,5 @@
 import chatRequestModel from "../model/chatRequest.model";
 import { IChatRequest } from "../interfaces/chatRequest.interface";
-import chatModel from "../model/chat.model";
-import { ObjectId } from "mongoose";
 
 export const getAllChatRequests = async (email: string) => {
   try {
