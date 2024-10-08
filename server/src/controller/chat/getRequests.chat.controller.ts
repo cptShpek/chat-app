@@ -6,9 +6,7 @@ import { getAllChatRequests } from "../../services/chat.services";
 export const getChatRequests = asyncHandler(
   async (req: Request<object, object, getChatRequestsInput>, res: Response) => {
     const { email } = req.body;
-    const chatRequests = await getAllChatRequests(email);
-    res
-      .status(201)
-      .json({ message: "Chat Request Loaded", success: true, chatRequests });
+    const { data, success } = await getAllChatRequests(email);
+    res.status(201).json({ message: "Chat Request Loaded", success, data });
   }
 );

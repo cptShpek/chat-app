@@ -8,7 +8,7 @@ import {
 } from "../../services/chat.services";
 import { ErrorCode } from "../../error/custom.errors";
 import BadRequestError from "../../error/badRequest.error";
-import { findUserByEmail } from "../../services/user.services";
+import { addUserToChat, findUserByEmail } from "../../services/user.services";
 
 export const changeChatRequestStatus = asyncHandler(
   async (
@@ -35,10 +35,13 @@ export const changeChatRequestStatus = asyncHandler(
           ErrorCode.BAD_REQUEST
         );
       }
-      await createChat([fromUser._id, toUser._id]);
+      const { data } = await createChat([fromUser._id, toUser._id]);
+      await addUserToChat(fromUser._id, data.id);
+      await addUserToChat(toUser._id, data.id);
     }
 
     await deleteChatRequest(_id);
+
     res.status(201).json({
       message: `Chat Request ${status ? "Accepted" : "Rejected"}`,
       success: true,

@@ -51,12 +51,12 @@ export const chatRequest = asyncHandler(
       );
     }
 
-    const request = await createChatRequest(chatRequest);
+    const { data } = await createChatRequest(chatRequest);
 
     res.status(201).json({
       message: "Chat Request Send",
       success: true,
-      chatRequest: { ...chatRequest },
+      data,
     });
   }
 );

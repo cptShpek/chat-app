@@ -11,5 +11,6 @@ export interface IUser extends Document {
   OTPCode?: string;
   OTPCodeExpires?: number;
   passwordResetCode?: string;
+  chats?: [string];
   role: IRole; // Reference to the Role model
 }

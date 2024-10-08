@@ -51,7 +51,7 @@ export const Layout: React.FC = () => {
         reqBody: { email },
       });
       if (response.success) {
-        setChatRequests(() => [...response.chatRequests]);
+        setChatRequests(() => [...response.data]);
       }
     },
     [appFetch, setChatRequests]
@@ -64,7 +64,7 @@ export const Layout: React.FC = () => {
       reqBody,
     });
     if (response.success) {
-      setChatRequests((v) => [...v, response.chatRequest]);
+      setChatRequests((v) => [...v, response.data]);
     }
   }, [user, requestedUser, appFetch]);
 

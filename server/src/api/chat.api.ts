@@ -15,7 +15,11 @@ const router = express.Router();
 
 // Create a new role
 router.post("/request", validateSchema(chatRequestSchema), chatRequest);
-router.post("/all", validateSchema(getChatRequestsSchema), getChatRequests);
+router.post(
+  "/request/all",
+  validateSchema(getChatRequestsSchema),
+  getChatRequests
+);
 router.post(
   "/request/status",
   validateSchema(chatRequestStatusSchema),

@@ -1,4 +1,10 @@
-import { FilterQuery, QueryOptions, Schema, UpdateQuery } from "mongoose";
+import {
+  FilterQuery,
+  ObjectId,
+  QueryOptions,
+  Schema,
+  UpdateQuery,
+} from "mongoose";
 import { IUser } from "../interfaces/user.interface";
 import UserModel from "../model/user.model";
 import roleModel from "../model/role.model";
@@ -54,4 +60,10 @@ export const updateUserById = async (
 
 export const deleteUserById = async (id: string) => {
   return await UserModel.deleteOne({ _id: id });
+};
+
+export const addUserToChat = async (userId: ObjectId, chatId: ObjectId) => {
+  return await UserModel.findByIdAndUpdate(userId, {
+    chats: (v) => [...v, chatId],
+  });
 };

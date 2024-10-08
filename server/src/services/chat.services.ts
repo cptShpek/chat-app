@@ -4,9 +4,14 @@ import chatModel from "../model/chat.model";
 import { ObjectId } from "mongoose";
 
 export const getAllChatRequests = async (email: string) => {
-  return await chatRequestModel
-    .find({ $or: [{ from: email }, { to: email }] })
-    .exec();
+  try {
+    const res = await chatRequestModel
+      .find({ $or: [{ from: email }, { to: email }] })
+      .exec();
+    return { success: true, data: res };
+  } catch (error) {
+    return { success: false, data: null, error };
+  }
 };
 
 export const getChatRequestById = async (_id: string) => {
@@ -44,8 +49,13 @@ export const deleteChatRequest = async (id: string) => {
 };
 
 export const createChat = async (userIds: ObjectId[]) => {
-  return await chatModel.create({
-    messages: [],
-    userIds,
-  });
+  try {
+    const result = await chatModel.create({
+      messages: [],
+      userIds,
+    });
+    return { data: result, success: true };
+  } catch (error) {
+    return { data: null, success: false, error };
+  }
 };
