@@ -1,4 +1,4 @@
-import { Schema, ObjectId, model } from "mongoose";
+import { Schema, model } from "mongoose";
 import { IChat } from "../interfaces/chat.interface";
 
 const chatSchema = new Schema<IChat>(
@@ -11,11 +11,11 @@ const chatSchema = new Schema<IChat>(
         index: true,
       },
     ],
-    userIds: [
+    users: [
       {
-        type: Schema.Types.ObjectId,
+        type: Object,
         ref: "User",
-        required: [true, "User ID is required"],
+        required: [true, "User is required"],
         index: true,
       },
     ],

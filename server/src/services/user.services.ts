@@ -64,6 +64,6 @@ export const deleteUserById = async (id: string) => {
 
 export const addUserToChat = async (userId: ObjectId, chatId: ObjectId) => {
   return await UserModel.findByIdAndUpdate(userId, {
-    chats: (v) => [...v, chatId],
+    $push: { chats: chatId },
   });
 };
