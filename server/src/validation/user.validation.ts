@@ -17,4 +17,13 @@ export const createUserSchema = object({
   }),
 });
 
+export const findUserSchema = object({
+  body: object({
+    email: string({ required_error: "Email is required" }).email(
+      "Invalid email format"
+    ),
+  }),
+});
+
 export type CreateUserInput = TypeOf<typeof createUserSchema>["body"];
+export type FindUserInput = TypeOf<typeof findUserSchema>["body"];

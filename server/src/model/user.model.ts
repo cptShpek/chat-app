@@ -13,6 +13,11 @@ const userSchema = new Schema<IUser>(
       type: String,
       unique: false,
     },
+    chats: {
+      type: [String],
+      unique: false,
+      default: [],
+    },
     email: {
       type: String,
       required: [true, "Email is required"],
