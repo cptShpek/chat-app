@@ -56,6 +56,7 @@ export const HomePage: React.FC = () => {
         <Item>
           <ChatList
             chats={chats}
+            selectedChatId={selectedChat?._id || ""}
             userEmail={user.email}
             onClick={handleChatClicked}
           />

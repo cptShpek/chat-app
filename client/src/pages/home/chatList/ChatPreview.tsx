@@ -1,14 +1,30 @@
 import React, { useCallback, useMemo } from "react";
 import { Chat } from "../../../interfaces";
-import { Card, CardActionArea, CardHeader } from "@mui/material";
+import { Card, CardActionArea, CardHeader, styled } from "@mui/material";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
+
+const StyledCard = styled(Card)({
+  "&.active": {
+    background: "#1976D2",
+    color: "#ffffff",
+    "& .MuiCardHeader-subheader": {
+      color: "lightgray",
+    },
+  },
+});
 
 interface Props {
   chat: Chat;
+  selectedChatId: string;
   userEmail: string;
   onClick: (id: string) => void;
 }
-export const ChatPreview: React.FC<Props> = ({ chat, userEmail, onClick }) => {
+export const ChatPreview: React.FC<Props> = ({
+  chat,
+  selectedChatId,
+  userEmail,
+  onClick,
+}) => {
   const lastMessage = useMemo(() => {
     const { messages } = chat;
     return messages.length > 0 ? messages[0].text : "no messages yet";
@@ -21,7 +37,7 @@ export const ChatPreview: React.FC<Props> = ({ chat, userEmail, onClick }) => {
   const handleClick = useCallback(() => onClick(chat._id), [chat, onClick]);
 
   return (
-    <Card>
+    <StyledCard className={selectedChatId === chat._id ? "active" : ""}>
       <CardActionArea onClick={handleClick}>
         <CardHeader
           align="start"
@@ -30,6 +46,6 @@ export const ChatPreview: React.FC<Props> = ({ chat, userEmail, onClick }) => {
           subheader={lastMessage}
         ></CardHeader>
       </CardActionArea>
-    </Card>
+    </StyledCard>
   );
 };
