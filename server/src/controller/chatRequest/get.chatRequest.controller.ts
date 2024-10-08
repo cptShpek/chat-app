@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import asyncHandler from "express-async-handler";
-import { getChatRequestsInput } from "../../validation/chat.validation";
-import { getAllChatRequests } from "../../services/chat.services";
+import { getAllChatRequests } from "../../services/chatRequest.service";
+import { getChatRequestsInput } from "../../validation/chatRequest.validation";
 
 export const getChatRequests = asyncHandler(
   async (req: Request<object, object, getChatRequestsInput>, res: Response) => {

@@ -4,24 +4,20 @@ import {
   chatRequestSchema,
   chatRequestStatusSchema,
   getChatRequestsSchema,
-} from "../validation/chat.validation";
+} from "../validation/chatRequest.validation";
 import {
-  chatRequest,
+  createChatRequest,
   getChatRequests,
   changeChatRequestStatus,
-} from "../controller/chat/index.chat.controller";
+} from "../controller/chatRequest/index.chatRequest.controller";
 
 const router = express.Router();
 
 // Create a new role
-router.post("/request", validateSchema(chatRequestSchema), chatRequest);
+router.post("/", validateSchema(chatRequestSchema), createChatRequest);
+router.post("/all", validateSchema(getChatRequestsSchema), getChatRequests);
 router.post(
-  "/request/all",
-  validateSchema(getChatRequestsSchema),
-  getChatRequests
-);
-router.post(
-  "/request/status",
+  "/status",
   validateSchema(chatRequestStatusSchema),
   changeChatRequestStatus
 );

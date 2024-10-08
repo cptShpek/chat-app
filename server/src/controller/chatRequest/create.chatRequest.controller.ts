@@ -3,16 +3,13 @@ import BadRequestError from "../../error/badRequest.error";
 import asyncHandler from "express-async-handler";
 import { findUser } from "../../services/user.services";
 import { ErrorCode } from "../../error/custom.errors";
-import { chatRequestInput } from "../../validation/chat.validation";
+import { chatRequestInput } from "../../validation/chatRequest.validation";
 import {
-  createChatRequest,
+  createChatRequest as createChatRequestService,
   isChatRequestExist,
-} from "../../services/chat.services";
+} from "../../services/chatRequest.service";
 
-//@desc  Activate email for customer
-//@method POST  /customer-auth/activate
-//@access public
-export const chatRequest = asyncHandler(
+export const createChatRequest = asyncHandler(
   async (req: Request<object, object, chatRequestInput>, res: Response) => {
     const { from, to } = req.body;
 
@@ -51,7 +48,7 @@ export const chatRequest = asyncHandler(
       );
     }
 
-    const { data } = await createChatRequest(chatRequest);
+    const { data } = await createChatRequestService(chatRequest);
 
     res.status(201).json({
       message: "Chat Request Send",

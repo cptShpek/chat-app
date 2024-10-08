@@ -1,14 +1,14 @@
 import { Request, Response } from "express";
 import asyncHandler from "express-async-handler";
-import { chatRequestStatusInput } from "../../validation/chat.validation";
-import {
-  createChat,
-  deleteChatRequest,
-  getChatRequestById,
-} from "../../services/chat.services";
+import { createChat } from "../../services/chat.services";
 import { ErrorCode } from "../../error/custom.errors";
 import BadRequestError from "../../error/badRequest.error";
 import { addUserToChat, findUserByEmail } from "../../services/user.services";
+import {
+  deleteChatRequest,
+  getChatRequestById,
+} from "../../services/chatRequest.service";
+import { chatRequestStatusInput } from "../../validation/chatRequest.validation";
 
 export const changeChatRequestStatus = asyncHandler(
   async (
