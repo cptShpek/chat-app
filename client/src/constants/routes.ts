@@ -15,4 +15,6 @@ export const ApiRoutes = {
   GET_ALL_CHAT_REQUESTS: "api/chatRequest/all",
   CHAT_REQUEST: "api/chatRequest/",
   CHAT_REQUEST_STATUS: "api/chatRequest/status",
+  // CHATS
+  CHAT: "api/chat",
 };
