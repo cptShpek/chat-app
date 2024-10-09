@@ -6,12 +6,14 @@ declare module "@mui/material/styles" {
   interface TypographyVariants {
     inputError?: React.CSSProperties;
     category?: React.CSSProperties;
+    body3?: React.CSSProperties;
   }
 
   // allow configuration using `createTheme`
   interface TypographyVariantsOptions {
     inputError?: React.CSSProperties;
     category?: React.CSSProperties;
+    body3?: React.CSSProperties;
   }
 }
 
@@ -20,6 +22,7 @@ declare module "@mui/material/Typography" {
   interface TypographyPropsVariantOverrides {
     inputError: true;
     category: true;
+    body3: true;
   }
 }
 
@@ -56,6 +59,12 @@ export const theme = createTheme({
       fontSize: "16px",
       fontWeight: 400,
       lineHeight: "19px",
+    },
+    body3: {
+      fontSize: "12px",
+      fontWeight: 400,
+      lineHeight: "19px",
+      color: "grey",
     },
     // CUSTOM VARIANTS
     inputError: {

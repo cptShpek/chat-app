@@ -49,14 +49,22 @@ export const HomePage: React.FC = () => {
       if (selectedChat) {
         const chatId = selectedChat._id;
         const fromEmail = user.email;
-        const response = await appFetch(ApiRoutes.CHAT + "/" + chatId, {
-          method: "POST",
-          reqBody: {
-            text,
-            fromEmail,
-          },
-        });
-        console.log({ response });
+        const { data, success } = await appFetch(
+          ApiRoutes.CHAT + "/" + chatId,
+          {
+            method: "POST",
+            reqBody: {
+              text,
+              fromEmail,
+            },
+          }
+        );
+        if (success) {
+          setSelectedChat((v) => {
+            v?.messages.push(data);
+            return v;
+          });
+        }
       }
     },
     [selectedChat, user, appFetch]
@@ -82,7 +90,11 @@ export const HomePage: React.FC = () => {
       </Grid2>
       <Grid2 size={9}>
         <Item>
-          <Chat selectedChat={selectedChat} onSubmit={handleMessageSubmit} />
+          <Chat
+            selectedChat={selectedChat}
+            onSubmit={handleMessageSubmit}
+            email={user.email}
+          />
         </Item>
       </Grid2>
     </Container>

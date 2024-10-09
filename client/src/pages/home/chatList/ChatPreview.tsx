@@ -2,6 +2,7 @@ import React, { useCallback, useMemo } from "react";
 import { Chat } from "../../../interfaces";
 import { Card, CardActionArea, CardHeader, styled } from "@mui/material";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
+import { useLastMessage } from "../../../hooks";
 
 const StyledCard = styled(Card)({
   "&.active": {
@@ -25,10 +26,7 @@ export const ChatPreview: React.FC<Props> = ({
   userEmail,
   onClick,
 }) => {
-  const lastMessage = useMemo(() => {
-    const { messages } = chat;
-    return messages.length > 0 ? messages[0].text : "no messages yet";
-  }, [chat]);
+  const lastMessage = useLastMessage({ chat, email: userEmail });
   const fromEmail = useMemo(() => {
     const { users } = chat;
     return users.filter((user) => user.email !== userEmail)[0].email;

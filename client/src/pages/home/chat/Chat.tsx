@@ -3,13 +3,15 @@ import { Chat as ChatInterface } from "../../../interfaces";
 import { Box } from "@mui/system";
 import { Typography } from "@mui/material";
 import { MessageInput } from "./MessageInput";
+import { Messages } from "./messages";
 
 interface Props {
   selectedChat: ChatInterface | null;
+  email: string;
   onSubmit: (value: string) => void;
 }
 
-export const Chat: React.FC<Props> = ({ selectedChat, onSubmit }) => {
+export const Chat: React.FC<Props> = ({ selectedChat, email, onSubmit }) => {
   const messages = useMemo(() => selectedChat?.messages || [], [selectedChat]);
 
   const handleSubmit = useCallback(
@@ -30,7 +32,9 @@ export const Chat: React.FC<Props> = ({ selectedChat, onSubmit }) => {
           {(!messages || messages.length === 0) && (
             <PlaceHolder text="No Messages Yet" />
           )}
-          {messages && messages.length > 0 && <></>}
+          {messages && messages.length > 0 && (
+            <Messages chat={selectedChat} email={email} />
+          )}
           <MessageInput onSubmit={handleSubmit} />
         </Box>
       )}

@@ -14,6 +14,6 @@ export interface ChatUser {
 
 export interface Message {
   text: string;
-  name: string;
+  fromEmail: string;
   createdAt: string;
 }
