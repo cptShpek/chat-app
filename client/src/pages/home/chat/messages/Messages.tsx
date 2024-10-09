@@ -12,10 +12,10 @@ interface Props {
 const Container = styled(Box)({
   width: "100%",
   display: "flex",
+  padding: "5px",
   flexDirection: "column",
   justifyContent: "flex-start",
-  minHeight: "100%",
-  flexGrow: 2,
+  overflowY: "scroll",
   gap: "5px",
   "& .from": {
     alignSelf: "flex-end",

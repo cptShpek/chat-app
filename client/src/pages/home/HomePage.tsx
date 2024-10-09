@@ -1,5 +1,5 @@
 import { Grid2, Paper } from "@mui/material";
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { ChatList } from "./chatList";
 import styled from "@emotion/styled";
 import { useUserContext } from "../../providers/user";
@@ -24,6 +24,7 @@ const Item = styled(Paper)({
 export const HomePage: React.FC = () => {
   const [loading, appFetch] = useFetch();
   const [chats, setChats] = useState<ChartInterface[]>([]);
+  const chatContainerRef = useRef(null);
   const [selectedChat, setSelectedChat] = useState<ChartInterface | null>(null);
   const { user } = useUserContext();
 
@@ -67,7 +68,7 @@ export const HomePage: React.FC = () => {
         }
       }
     },
-    [selectedChat, user, appFetch]
+    [selectedChat, user, appFetch, setSelectedChat]
   );
 
   useEffect(() => {
@@ -88,7 +89,7 @@ export const HomePage: React.FC = () => {
           />
         </Item>
       </Grid2>
-      <Grid2 size={9}>
+      <Grid2 size={9} ref={chatContainerRef}>
         <Item>
           <Chat
             selectedChat={selectedChat}
