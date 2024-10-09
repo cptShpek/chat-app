@@ -6,3 +6,5 @@ export * from "./useLogin";
 export * from "./useHandleInputChange";
 export * from "./useSignUp";
 export * from "./useActivateUser";
+export * from "./useLastMessage";
+export * from "./useDateString";

@@ -24,7 +24,7 @@ export const ConfigureProviders: React.FC = () => {
       {/*  NOTISTACK NOTIFICATIONS PROVIDER */}
       <SnackbarProvider
         maxSnack={3}
-        anchorOrigin={{ vertical: "top", horizontal: "right" }}
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
         autoHideDuration={4000}
       >
         <UserProvider>

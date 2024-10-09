@@ -8,6 +8,13 @@ import { ApiRoutes, AppRoutes } from "../constants/routes";
 import { ChatRequestsDialog } from "./ChatRequests/ChatRequests";
 import { ChatRequest, User } from "../interfaces";
 import { Backdrop, CircularProgress } from "@mui/material";
+import styled from "@emotion/styled";
+
+const Wrapper = styled("div")({
+  height: "100vh - 70px",
+  maxHeight: "100vh - 70px",
+  overflow: "hidden",
+});
 
 export const Layout: React.FC = () => {
   const navigate = useNavigate();
@@ -119,7 +126,9 @@ export const Layout: React.FC = () => {
         onChatRequests={handleChatRequestsOpen}
       />
       <AppDrawer open={open} onClose={handleDrawerClose} />
-      <Outlet />
+      <Wrapper>
+        <Outlet />
+      </Wrapper>
     </>
   );
 };

@@ -1,6 +1,8 @@
 import { Document, ObjectId, Schema } from "mongoose";
+import { IUser } from "./user.interface";
+import { IMessage } from "./message.interface";
 
 export interface IChat extends Document {
-  userIds: [ObjectId];
-  messages: [ObjectId];
+  users: [Partial<IUser>];
+  messages: [IMessage];
 }

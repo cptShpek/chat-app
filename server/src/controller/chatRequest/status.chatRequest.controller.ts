@@ -35,9 +35,12 @@ export const changeChatRequestStatus = asyncHandler(
           ErrorCode.BAD_REQUEST
         );
       }
-      const { data } = await createChat([fromUser._id, toUser._id]);
-      await addUserToChat(fromUser._id, data.id);
-      await addUserToChat(toUser._id, data.id);
+      const { data } = await createChat([
+        { email: fromUser.email, name: fromUser.name, _id: fromUser._id },
+        { email: toUser.email, name: toUser.name, _id: toUser._id },
+      ]);
+      await addUserToChat(fromUser._id, data._id);
+      await addUserToChat(toUser._id, data._id);
     }
 
     await deleteChatRequest(_id);
