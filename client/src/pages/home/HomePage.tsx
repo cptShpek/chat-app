@@ -44,6 +44,24 @@ export const HomePage: React.FC = () => {
     [chats]
   );
 
+  const handleMessageSubmit = useCallback(
+    async (text: string) => {
+      if (selectedChat) {
+        const chatId = selectedChat._id;
+        const fromEmail = user.email;
+        const response = await appFetch(ApiRoutes.CHAT + "/" + chatId, {
+          method: "POST",
+          reqBody: {
+            text,
+            fromEmail,
+          },
+        });
+        console.log({ response });
+      }
+    },
+    [selectedChat, user, appFetch]
+  );
+
   useEffect(() => {
     if (user.isActive) {
       fetchChats(user._id);
@@ -64,7 +82,7 @@ export const HomePage: React.FC = () => {
       </Grid2>
       <Grid2 size={9}>
         <Item>
-          <Chat selectedChat={selectedChat} />
+          <Chat selectedChat={selectedChat} onSubmit={handleMessageSubmit} />
         </Item>
       </Grid2>
     </Container>

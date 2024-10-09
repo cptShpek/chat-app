@@ -5,8 +5,8 @@ const chatSchema = new Schema<IChat>(
   {
     messages: [
       {
-        type: Schema.Types.ObjectId,
-        required: [true, "Message ID is required"],
+        type: Object,
+        required: [true, "Message is required"],
         ref: "Message",
         index: true,
       },

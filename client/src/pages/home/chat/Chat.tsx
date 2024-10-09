@@ -1,31 +1,53 @@
-import React, { useMemo } from "react";
+import React, { useCallback, useMemo } from "react";
 import { Chat as ChatInterface } from "../../../interfaces";
 import { Box } from "@mui/system";
 import { Typography } from "@mui/material";
+import { MessageInput } from "./MessageInput";
 
 interface Props {
   selectedChat: ChatInterface | null;
+  onSubmit: (value: string) => void;
 }
 
-export const Chat: React.FC<Props> = ({ selectedChat }) => {
+export const Chat: React.FC<Props> = ({ selectedChat, onSubmit }) => {
   const messages = useMemo(() => selectedChat?.messages || [], [selectedChat]);
+
+  const handleSubmit = useCallback(
+    (value: string) => onSubmit(value),
+    [onSubmit]
+  );
   return (
     <>
-      {!selectedChat && <PlaceHolder />}
-      {selectedChat && <Typography variant="h3">chat selected</Typography>}
+      {!selectedChat && <PlaceHolder text="Select Chat to Start" />}
+      {selectedChat && (
+        <Box
+          display="flex"
+          flexDirection="column"
+          justifyContent="center"
+          alignItems="center"
+          minHeight="100%"
+        >
+          {(!messages || messages.length === 0) && (
+            <PlaceHolder text="No Messages Yet" />
+          )}
+          {messages && messages.length > 0 && <></>}
+          <MessageInput onSubmit={handleSubmit} />
+        </Box>
+      )}
     </>
   );
 };
 
-const PlaceHolder: React.FC = () => {
+const PlaceHolder: React.FC<{ text: string }> = ({ text }) => {
   return (
     <Box
       display="flex"
       justifyContent="center"
+      flexGrow={2}
       alignItems="center"
       minHeight="100%"
     >
-      <Typography variant="h4">Select Chat to Start</Typography>
+      <Typography variant="h5">{text}</Typography>
     </Box>
   );
 };
